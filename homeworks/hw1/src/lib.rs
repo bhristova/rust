@@ -1,4 +1,4 @@
-pub fn base_fizzbuzz(n: usize, k1: u8, k2: u8, labels: &[String; 3]) -> Vec<String> {
+fn base_fizzbuzz(n: usize, k1: u8, k2: u8, labels: &[String; 3]) -> Vec<String> {
     let mut result = vec![];
     for x in 1..n + 1 {
         match x as u8 {
