@@ -1,4 +1,4 @@
-use solution::*;
+use hw1::*;
 
 #[test]
 fn test_basic() {
