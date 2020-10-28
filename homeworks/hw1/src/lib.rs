@@ -6,13 +6,14 @@ fn base_fizzbuzz(n: usize, k1: u8, k2: u8, labels: &[String; 3]) -> Vec<String> 
     if k1 == 1 || k2 == 1 {
         panic!("What is the point of dividing by one?!")
     }
-
+    let k1Usize = k1 as usize;
+    let k2Usize = k2 as usize;
     let mut result = Vec::<String>::new();
     for x in 1..n + 1 {
         match x as usize {
-            x if x % k1 == 0 && x % k2 == 0 => result.push(String::from(&labels[2])),
-            x if x % k1 == 0 => result.push(String::from(&labels[0])),
-            x if x % k2 == 0 => result.push(String::from(&labels[1])),
+            x if x % k1Usize == 0 && x % k2Usize == 0 => result.push(String::from(&labels[2])),
+            x if x % k1Usize == 0 => result.push(String::from(&labels[0])),
+            x if x % k2Usize == 0 => result.push(String::from(&labels[1])),
             _ => result.push(x.to_string())
         }
     }
