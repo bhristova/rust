@@ -1,4 +1,4 @@
-use hw1::*;
+use solution::*;
 
 #[test]
 fn test_basic() {
@@ -18,4 +18,34 @@ fn test_basic() {
     };
     assert_eq!(fizzbuzzer.take(3), expected);
     fizzbuzzer.change_label(0, &String::from("Fiz"));
+}
+
+#[test]
+#[should_panic]
+fn test_panic_zero() {
+    let fizzbuzzer = FizzBuzzer {
+        k1: 0,
+        k2: 5,
+        labels: [
+            String::from("Fizz"),
+            String::from("Buzz"),
+            String::from("Fizzbuzz")
+        ],
+    };
+    fizzbuzzer.take(3);
+}
+
+#[test]
+#[should_panic]
+fn test_panic_one() {
+    let fizzbuzzer = FizzBuzzer {
+        k1: 6,
+        k2: 1,
+        labels: [
+            String::from("Fizz"),
+            String::from("Buzz"),
+            String::from("Fizzbuzz")
+        ],
+    };
+    fizzbuzzer.take(3);
 }
