@@ -9,3 +9,5 @@ The two strategies consist of the following moves, in prioritized order:
 - Double sided trap move - similar to the Trap move, but the center cell and the two adjacent cells form a corner;
 - Risk move - if none of the previous moves can be used, the risk for each cell is calculated - that consists of calculating the amount of cells with the opponent's mark in the current row, column and two diagonals. The cell with the highest risk is chosen and the computer places its mark there;
 - Attack move - this is the final move, which is played when the highest risk is lower than or equal to one. That way the computer isn't playing defence when there is no need for it. The attack move discovers the best fit cell to place the computer's mark which will bring the computer one step closer to winning.
+
+[strategies source](https://www.quora.com/What-are-the-best-strategies-to-win-a-4*4-Tic-Tac-Toe?share=1)
